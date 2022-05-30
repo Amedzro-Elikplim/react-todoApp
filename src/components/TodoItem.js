@@ -2,7 +2,7 @@ import React from 'react';
 
 const TodoItem = (props) => {
         return (
-            <li> <input type="checkbox" /> {props.todo.title}</li>
+            <li>{props.todo.title}</li>
         )
 }
 
