@@ -1,19 +1,9 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 
-class TodoItem extends PureComponent {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            
-        }
-    }
-
-    render() {
+const TodoItem = (props) => {
         return (
-            <h1>Hello world</h1>
+            <li>{props.todo.title}</li>
         )
-    }
 }
 
 export default TodoItem
