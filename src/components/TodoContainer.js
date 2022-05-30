@@ -5,15 +5,35 @@ class TodoContainer extends PureComponent {
         super(props)
 
         this.state = {
-            
-        }
+          todo: [
+            {
+              id: 1,
+              title: "Setup development environment",
+              completed: true,
+            },
+            {
+              id: 2,
+              title: "Develop website and add content",
+              completed: false,
+            },
+            {
+              id: 3,
+              title: "Deploy to live server",
+              completed: false,
+            },
+          ],
+        };
     }
 
     render() {
         return (
-            <React.Fragment>
-                <h1>Hello world</h1>
-            </React.Fragment>
+                <ul>
+                    {
+                        this.state.todo.map((todo) => (
+                            <li key={todo.id}>{todo.title}</li>
+                        ))
+                    }
+                </ul>
         )
     }
 }
