@@ -11,9 +11,10 @@ class TodosList extends PureComponent {
   }
 
   render() {
+    const { todos } = this.props;
     return (
       <ul>
-        {this.props.todos.map((todo) => (
+        {todos.map((todo) => (
           <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
