@@ -1,21 +1,41 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from 'react';
+import TodosList from './TodosList';
+import Header from './Header';
 
 class TodoContainer extends PureComponent {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            
-        }
-    }
+    this.state = {
+      todos: [
+        {
+          id: 1,
+          title: 'Setup development environment',
+          completed: true,
+        },
+        {
+          id: 2,
+          title: 'Develop website and add content',
+          completed: false,
+        },
+        {
+          id: 3,
+          title: 'Deploy to live server',
+          completed: false,
+        },
+      ],
+    };
+  }
 
-    render() {
-        return (
-            <React.Fragment>
-                <h1>Hello world</h1>
-            </React.Fragment>
-        )
-    }
+  render() {
+    const { todos } = this.state;
+    return (
+      <>
+        <Header />
+        <TodosList todos={todos} />
+      </>
+    );
+  }
 }
 
-export default TodoContainer
+export default TodoContainer;
