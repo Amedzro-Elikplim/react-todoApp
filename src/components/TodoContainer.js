@@ -6,7 +6,7 @@ class TodoContainer extends PureComponent {
         super(props)
 
         this.state = {
-          todo: [
+          todos: [
             {
               id: 1,
               title: "Setup development environment",
@@ -28,7 +28,7 @@ class TodoContainer extends PureComponent {
 
     render() {
         return (
-            <TodosList props={this.state.todo} />
+            <TodosList todos={this.state.todos} />
         )
     }
 }
